@@ -44,13 +44,21 @@
         include('dbconnection.php');
 
         //query to get pswrd
-        $qry = "SELECT 'pswrd' FROM 'tblcustomer' WHERE 'email' = '$email'";
+        $qry = "SELECT `pswrd` FROM `tblcustomer` WHERE `email` = '$email'";
 
         //connect db and query
         $select = mysqli_query($conn, $qry);
         if($select){
             echo "<br>query entered<br>";
-            $result = mysqli_fetch_array();
+            if($select->num_rows > 0){
+                $data = mysqli_fetch_assoc($select);
+                if($data['pswrd'] !== $pswrd){
+                    echo "Password Incorrect!!!";
+                    
+                }
+            }else{
+                echo "Data not found!";
+            }
         }else{
             echo "<br>Query could not run<br>";
         }
