@@ -3,7 +3,7 @@
     //check if pswrd and confirm password are same
     function pswrdconf($pswrd, $pswrd1){
         if($pswrd !== $pswrd1){
-            echo 'Password and Confirm Password does not match';
+            ?><script>alert("Password does not match!!!")</script><?php
         }
     }
 
@@ -44,15 +44,38 @@
         include('dbconnection.php');
 
         //query to get pswrd
-        $qry = "SELECT 'pswrd' FROM 'tblcustomer' WHERE 'email' = '$email'";
+        $qry = "SELECT `pswrd` FROM `tblcustomer` WHERE `email` = '$email'";
 
         //connect db and query
         $select = mysqli_query($conn, $qry);
         if($select){
-            echo "<br>query entered<br>";
-            $result = mysqli_fetch_array();
+
+            //echo "<br>query entered<br>";
+
+            if($select->num_rows > 0){
+
+                $data = mysqli_fetch_assoc($select);
+
+                if($data['pswrd'] !== $pswrd){
+
+                    ?><script>alert("Password Incorrect!!!")</script><?php
+
+                }else{
+
+                    ?><script>alert("Password Verified!!")</script><?php
+
+                }
+
+            }else{
+
+                ?><script>alert("Data Not Found")</script><?php
+
+            }
+
         }else{
-            echo "<br>Query could not run<br>";
+
+            ?><script>alert("Query could not be executed!!")</script><?php
+        
         }
 
     }

@@ -1,6 +1,7 @@
 <html>
 
 <head>
+    <!--imp to write meta, for opening website on phone and laptop accordingly-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
@@ -22,7 +23,7 @@
             <button type="submit" class="signup-button" name="signup">Sign Up</button>
             <hr>
             <p>OR</p>
-            <p>Do you already have an account? <a href="login.php">Log In</a></p>
+            <p>Do you already have an account? <a href="login.php" style="background-color: 'blue' ;"><b>Log In</b></a></p>
         </form>
     </div>
 </body>
@@ -36,7 +37,6 @@ if (isset($_POST['signup'])) {
     $pswrd = $_POST['pswrd'];
     $pswrd1 = $_POST['pswrd1'];
 
-    // include('query.php');
     include('functions.php');
 
     pswrdconf($pswrd, $pswrd1);
