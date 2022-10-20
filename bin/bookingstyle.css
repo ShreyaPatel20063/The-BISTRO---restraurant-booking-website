@@ -6,6 +6,8 @@ body
     color: brown;
     letter-spacing: 1px;
     background-image:url("bgsgp.jpeg");
+    background-repeat: no-repeat;
+    background-size: auto;
 }
     *{
        /* box-sizing: border-box;*/
