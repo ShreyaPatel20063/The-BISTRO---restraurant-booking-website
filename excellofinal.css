@@ -1,0 +1,107 @@
+body
+{
+    font-family: 'Raleway',sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    color: brown;
+    letter-spacing: 1px;
+    background-image:url("bgsgp.jpeg");
+    background-repeat: no-repeat;
+    background-size: 1600px 1100px;
+}
+    *{
+       /* box-sizing: border-box;*/
+    }
+    .container
+    {
+        box-shadow: rgba(0,0,0,.1);
+        padding-top: 5px;
+        padding-bottom: 5px; 
+        margin:200px;
+        background-color:#fff;
+        display:grid;
+        grid-template-columns: 40% 60%;
+        border:4px solid #8a4b4b;
+        border-radius:50px;
+        
+
+
+    }
+    
+    .container-time
+    {
+        padding-top:150px;
+        background-color: #ABCEA4;
+        text-align: center;
+        padding:50px;
+        margin:50px;
+        border: 4px solid #702626;
+        border-radius:50px;
+        width:400px;
+        height:477px;
+        outline:dashed;
+        outline-offset:-30px;
+        font-size: 24px;
+        
+    }
+    .heading-time
+    {
+        padding-top: 20px;
+        padding-bottom: 0px;
+        font-size: 30px;
+        font-style: bold;
+        font-weight:  300px;
+    }
+    .heading-days
+    {
+        font-size: 18px;
+        color:#8a4b4b;
+    }
+    .container-form
+    {
+        padding-left:200px; 
+        font-size: 20px;
+        width:max-content  ;
+        padding-bottom:-37px;
+
+
+       
+        
+    }
+    .form-field p{
+        font-weight: 600;
+    }
+    .form-field
+    {
+        display: flex;
+        justify-content: space-between;
+        border:none;
+        margin:10;
+        padding-top:2px;
+        padding-bottom:2px;
+
+        
+    }
+.heading-res
+{
+    text-align: center;
+    font-size:24px;
+    padding-top:62px;
+}
+.btn
+{
+    background-color: rgb(197, 73, 73);
+    border:none;
+    border-radius: 20px;
+    color:white;
+    font-size:x-large;
+    margin:20px;
+    padding-left:80px;
+    padding-right:80px;
+    cursor: pointer;
+    margin-left:100px;
+    box-shadow: 10px;
+}
+.btn:hover{
+    background-color: #8a4b4b;
+}

@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="bookingstyle.css">
+    <link rel="stylesheet" href="excellofinal.css">
 </head>
 <body>
     <div class="container">
@@ -31,33 +31,30 @@
 
         </div>
         <div class="container-form">
-            <form action="#">
+            <form action="<?php $_PHP_SELF?>" method="post">
                 <div class="heading-res"><h2>ONLINE RESERVATION</h2></div>
                
                 <div class="form-field">
                     <p>Your Registered Name:</p>
-                    <input type="text" placeholder="Your Name">
+                    <input type="text" name="name" id="name" placeholder="Your Name" required>
                 </div>
                 <div class="form-field">
                     <p>Your Registered Email:</p>
-                    <input type="email" placeholder="Your Email">
+                    <input type="email" name="email" id="email" placeholder="Your Email" required>
                 </div>
                 <div class="form-field">
                     <p>Date:</p>
-                    <input type="date" placeholder="dd-mm-yy">
+                    <input type="date" name="date" id="date" placeholder="dd-mm-yy" required>
                 </div>
                 <div class="form-field">
                     <p>Time:</p>
-                    <input type="time">
+                    <input type="time" name="time" id="time">
                 </div>
                 <div class="form-field">
                     <p>Number of people(Min:1, Max:15):</p>
-                    <input type="number" id="people" name="people" placeholder="People" min="1" max="15">
+                    <input type="number" id="people" name="people" placeholder="People" min="1" max="15" required>
                  </div>
-                <button class="btn" type="submit">
-                    SUBMIT
-
-                </button>
+                <button class="btn" type="submit" name="submit">SUBMIT</button>
 
             </form>
 
@@ -66,3 +63,23 @@
     
 </body>
 </html>
+
+<?php
+    if(isset($_POST['submit'])){
+        $email = $_POST['email'];
+        $name = $_POST['name'];
+        $people = $_POST['people'];
+        $date = $_POST['date'];
+        $time = $_POST['time'];
+
+        echo "php self entered";
+
+        include("bookingfunc.php");
+
+        checkMail($email, $name, $people, $date, $time);
+
+    }
+    else{
+        echo "cannot enter";
+    }
+?>
