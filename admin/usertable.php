@@ -13,17 +13,37 @@ body{
 }
 </style>
 <body>
+  <h2>User Details table</h2>
 
-<h2>User Details table</h2>
+  <table style="width:80%">
+  <?php
+    include("C:/xampp/htdocs/firstphp/The-BISTRO---restraurant-booking-website/dbconnection.php");
+    $qry = "SELECT * FROM tblcustomer";
+    $datafetch = mysqli_query($conn, $qry);
 
-<table style="width:100%">
-  <tr>
-   
-    <th>cid</th>
-    <th>email</th>
-    <th>phone</th>
-    <th>pswd</th>
-</tr>
+    if($datafetch->num_rows > 0){
+      ?> 
+        <tr>
+          <th>cid</th>
+          <th>email</th>
+          <th>phone</th>
+          <th>pswd</th>
+        </tr> <?php
+        while($data = mysqli_fetch_assoc($datafetch)){
+          echo "<tr>
+          <td>" . $data['cid'] . "</td>
+          <td>" . $data['email'] . "</td>
+          <td>" . $data['phone'] . "</td>
+          <td>" . $data['pswrd'] . "</td>
+          
+        </tr>";
+        }
+    }else{
+      ?> <script>0 results..</script> <?php
+    }
+  ?>
+
+
   <tr>
     <td></td>
     <td></td>
