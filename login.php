@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <html>
     <head>
         <title>
@@ -25,5 +28,24 @@
 
         include('functions.php');
         login_info($email, $pswrd);
+
+
+        include("dbconnection.php");
+        $sessiondata = "SELECT * FROM  tblcustomer WHERE email = '$email'";
+        echo $sessiondata;
+        $sessionconnectiontoDB = mysqli_query($conn, $sessiondata);
+
+        if($sessionconnectiontoDB){
+            $dataforsession = mysqli_fetch_assoc($sessionconnectiontoDB);
+            $_SESSION['email'] = $dataforsession['email'];
+            $_SESSION['pswrd'] = $dataforsession['pswrd'];
+            $_SESSION['name'] = $dataforsession['name'];
+            $_SESSION['phone'] = $dataforsession['phone'];
+            $_SESSION['cid'] = $dataforsession['cid'];
+            header("https://www.google.com");
+        }
+        else {
+            echo "session data not entered";
+        }
     }
 ?>

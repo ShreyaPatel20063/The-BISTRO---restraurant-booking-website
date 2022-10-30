@@ -36,13 +36,17 @@ if (isset($_POST['signup'])) {
 
     $pswrd = $_POST['pswrd'];
     $pswrd1 = $_POST['pswrd1'];
+    $phone = $_POST['phone'];
 
     include('functions.php');
 
     pswrdconf($pswrd, $pswrd1);
+    if(checkphone($phone)){
+        addtoDB();
+    }else{
+        echo "<script>alert('PHONE NUMBER invalid')</script>";
+    }
     
-    addtoDB();
-
 }else{
     echo "Cannot register";
 }

@@ -25,6 +25,7 @@ body{
       ?> 
         <tr>
           <th>cid</th>
+          <th>name</th>
           <th>email</th>
           <th>phone</th>
           <th>pswd</th>
@@ -32,6 +33,7 @@ body{
         while($data = mysqli_fetch_assoc($datafetch)){
           echo "<tr>
           <td>" . $data['cid'] . "</td>
+          <td>". $data['name'] ."</td>
           <td>" . $data['email'] . "</td>
           <td>" . $data['phone'] . "</td>
           <td>" . $data['pswrd'] . "</td>

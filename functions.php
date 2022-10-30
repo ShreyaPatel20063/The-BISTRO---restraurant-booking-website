@@ -7,6 +7,19 @@
         }
     }
 
+    //check phone number
+    function checkphone($phone){
+        //eliminate every char except 0-9
+        $justNums = preg_replace("/[^0-9]/", '', $phone);
+
+        //if we have 10 digits left, it's probably valid.
+        if (strlen($justNums) == 10) {
+            return true;
+        }else{
+            return false;
+        }
+    }
+
     //add values to database
     function addtoDB(){
 
@@ -59,6 +72,7 @@
                 if($data['pswrd'] !== $pswrd){
 
                     ?><script>alert("Password Incorrect!!!")</script><?php
+                    
 
                 }else{
 

@@ -1,4 +1,7 @@
 <!--HTML FOR RESERVATION (SGP 3RD SEM)-->
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,7 +39,7 @@
                
                 <div class="form-field">
                     <p>Your Registered Name:</p>
-                    <input type="text" name="name" id="name" placeholder="Your Name" required>
+                    <input type="text" name="name" id="name" placeholder="<?php $_********* ?>" required>
                 </div>
                 <div class="form-field">
                     <p>Your Registered Email:</p>
