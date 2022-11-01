@@ -15,6 +15,6 @@ if ($conn->connect_error) {
 
 }else{
 
-    echo "DB connection established<br>";
+    //echo "DB connection established<br>";
 
 }

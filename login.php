@@ -32,7 +32,7 @@ session_start();
 
         include("dbconnection.php");
         $sessiondata = "SELECT * FROM  tblcustomer WHERE email = '$email'";
-        echo $sessiondata;
+        //echo $sessiondata;
         $sessionconnectiontoDB = mysqli_query($conn, $sessiondata);
 
         if($sessionconnectiontoDB){
@@ -42,7 +42,9 @@ session_start();
             $_SESSION['name'] = $dataforsession['name'];
             $_SESSION['phone'] = $dataforsession['phone'];
             $_SESSION['cid'] = $dataforsession['cid'];
-            header("https://www.google.com");
+            //echo "<script>window.location.replace('https://example.com/')</script>";//********************************************************************************************** */
+            header("Location: booking.php");
+            //exit();
         }
         else {
             echo "session data not entered";

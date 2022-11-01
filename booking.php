@@ -39,11 +39,11 @@
                
                 <div class="form-field">
                     <p>Your Registered Name:</p>
-                    <input type="text" name="name" id="name" placeholder="<?php $_********* ?>" required>
+                    <?php echo $_SESSION['name']?>
                 </div>
                 <div class="form-field">
                     <p>Your Registered Email:</p>
-                    <input type="email" name="email" id="email" placeholder="Your Email" required>
+                    <?php echo $_SESSION['email']?>
                 </div>
                 <div class="form-field">
                     <p>Date:</p>
@@ -69,17 +69,24 @@
 
 <?php
     if(isset($_POST['submit'])){
-        $email = $_POST['email'];
-        $name = $_POST['name'];
+        $email = $_SESSION['email'];
+        $name = $_SESSION['name'];
         $people = $_POST['people'];
         $date = $_POST['date'];
         $time = $_POST['time'];
 
-        echo "php self entered";
+        //echo "php self entered";
 
         include("bookingfunc.php");
+       /* if(datevalidation($date, $time)){
+            checkMail($people, $date, $time);
+        }
+        else{
+            echo "<script>alert()</script>";
+        }*/
 
-        checkMail($email, $name, $people, $date, $time);
+        checkMail($people, $date, $time);
+        
 
     }
     else{

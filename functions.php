@@ -41,9 +41,9 @@
 
 
                 if($insert){
-                    echo "Success";
+                    //echo "Success";
                 }else{
-                    echo "Already Exists";
+                    //echo "Already Exists";
                 }
         }else{
             echo 'query not executed.';
