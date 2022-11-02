@@ -1,9 +1,6 @@
 <html>
 
 <head>
-    <!--imp to write meta, for opening website on phone and laptop accordingly-->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
         Sign Up Form
     </title>
@@ -19,11 +16,12 @@
             <input type="Password" class="input-box" name="pswrd" placeholder="Enter Password">
             <input type="Password" class="input-box" name="pswrd1" placeholder="Confirm Password">
             <input type="Phone" class="input-box" name="phone" placeholder="Enter Phone No.">
+            
             <p><span><input type="checkbox" id="checkbox" required></span>I agree to the terms and services.</p>
             <button type="submit" class="signup-button" name="signup">Sign Up</button>
             <hr>
             <p>OR</p>
-            <p>Do you already have an account? <a href="login.php" style="background-color: 'blue' ;"><b>Log In</b></a></p>
+            <p>Do you already have an account? <a href="login.php">Log In</a></p>
         </form>
     </div>
 </body>

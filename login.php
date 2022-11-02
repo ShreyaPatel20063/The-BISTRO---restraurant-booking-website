@@ -25,6 +25,7 @@ session_start();
 
         $email = $_POST['email'];
         $pswrd = $_POST['pswrd'];
+        
 
         include('functions.php');
         login_info($email, $pswrd);
@@ -42,8 +43,7 @@ session_start();
             $_SESSION['name'] = $dataforsession['name'];
             $_SESSION['phone'] = $dataforsession['phone'];
             $_SESSION['cid'] = $dataforsession['cid'];
-            //echo "<script>window.location.replace('https://example.com/')</script>";//********************************************************************************************** */
-            header("Location: booking.php");
+            header("Location: index.php");
             //exit();
         }
         else {

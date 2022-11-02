@@ -6,13 +6,15 @@ body
     font-weight: 400;
     color: brown;
     letter-spacing: 1px;
-    background-image:url("bgsgp.jpeg");
+    background-image:url("excellobg1.jpg");
     background-repeat: no-repeat;
     background-size: 1600px 1100px;
 }
     *{
        /* box-sizing: border-box;*/
     }
+
+    
     .container
     {
         box-shadow: rgba(0,0,0,.1);
@@ -28,6 +30,8 @@ body
 
 
     }
+    
+
     
     .container-time
     {

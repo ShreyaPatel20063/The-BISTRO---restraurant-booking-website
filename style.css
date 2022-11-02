@@ -1,22 +1,29 @@
 body
 {
     margin:0;
-    padding:0;
+    padding-top:0px;
     font-family:sans serif;
-    background-image:url(signupbg.jfif);
-    background-size:cover;
-    background-position:center;
-
-
+    background-image:url(finalbgsgp.jpg);
+    background-repeat:no-repeat;
+    background-size:1522px 1100px;
+    
 }
+
+
+
 .signupform
 {
     width:300px;
     box-shadow:0 0 5px 0 rgba (0, 0,0, 0.5);
-    background:#fff;
+    background:white;
     padding:20px;
-    margin:8%;
     text-align:center;
+    align:center;
+    margin-left:595px;
+    margin-top:129px;
+    border:4px solid green;
+    border-radius:3px;
+    
 
 
 }
@@ -49,7 +56,7 @@ a
 hr
 {
     margin-top:20 px;
-    width:80%;
+    width:80%;
 
 
 }
