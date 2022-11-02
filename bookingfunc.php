@@ -17,7 +17,7 @@
             //$data = mysqli_fetch_assoc($selectfromDB);
             //if($name == $data['name']){
                 //echo "Data Valid";
-                $cid = $data['cid'];
+                $cid = $_SESSION['cid'];
                 $booking = "INSERT INTO tblbooking (cid, people, date, time, status) VALUES ('$cid', '$people', '$date', '$time', 'pending')";
                 $insertintoDB = mysqli_query($conn, $booking);
                 if($insertintoDB){
