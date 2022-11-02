@@ -15,6 +15,9 @@ session_start();
             <input type="email" class="input-box" name="email" placeholder="Enter your Email">
             <input type="Password" class="input-box" name="pswrd" placeholder="Enter Password">
             <button type="submit" class="signup-button" name="login">Login</button>
+            <hr>
+            <p>OR</p>
+            <p>Create a new account? <a href="signup.php">Sign Up</a></p>
             </form>
         </div>
     </body>

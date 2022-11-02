@@ -43,7 +43,9 @@ session_start();
     <meta property="og:title" content="home">
     <meta property="og:type" content="website">
   </head>
-  <body data-home-page="https://website2967332.nicepage.io/index.php?version=28feaf5c-4072-4a80-b2b3-5929668e3f28" data-home-page-title="home" class="u-body u-xl-mode" data-lang="en"><header class="u-clearfix u-custom-color-2 u-header u-sticky u-header" id="sec-af6e"><div class="u-clearfix u-sheet u-sheet-1">
+  <body data-home-page="https://website2967332.nicepage.io/index.php?version=28feaf5c-4072-4a80-b2b3-5929668e3f28" data-home-page-title="home" class="u-body u-xl-mode" data-lang="en">
+    <header class="u-clearfix u-custom-color-2 u-header u-sticky u-header" id="sec-af6e">
+      <div class="u-clearfix u-sheet u-sheet-1">
         <a href="index.php" class="u-image u-logo u-image-1" data-image-width="1920" data-image-height="637" title="home">
           <img src="images/Whitelogo-nobackground.png" class="u-logo-image u-logo-image-1">
         </a>
@@ -52,9 +54,6 @@ session_start();
         <a href="signup.php" class="u-btn u-button-style u-custom-font u-heading-font u-none u-text-hover-grey-15 u-btn-3">Login/SignUp</a>
         <a href="https://excello.com/jobs" class="u-btn u-button-style u-custom-font u-heading-font u-none u-text-hover-grey-15 u-btn-4">Hiring</a>
         <a href="booking.php" class="u-btn u-button-style u-custom-font u-heading-font u-none u-text-hover-grey-15 u-btn-5">Reservation</a>
-        <?php
-          
-        ?>
         <a href="menu.html" class="u-btn u-button-style u-custom-font u-heading-font u-none u-text-hover-grey-15 u-btn-6">Menu</a>
       </div></header>
     <section class="u-align-left u-clearfix u-color-scheme-u11 u-color-style-multicolor-1 u-image u-section-1" id="carousel_c8fc" data-image-width="1648" data-image-height="1080">

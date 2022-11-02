@@ -1,6 +1,8 @@
 <!--HTML FOR RESERVATION (SGP 3RD SEM)-->
 <?php
     session_start();
+    if(isset($_SESSION['name'])){
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,6 +15,7 @@
 </head>
 
 <body>
+    <?php //include("header.php"); ?><!-- ******************************************************************************************************************* -->
     <div class="container">
         <div class="container-time">
             <div class="heading-time">
@@ -94,4 +97,7 @@
     else{
         echo "cannot enter";
     }
+}else{
+    header("Location: signup.php");
+}
 ?>
