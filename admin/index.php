@@ -4,7 +4,7 @@
     <header data-role="Accordion" class="admin-header">
       <img
         alt="logo"
-        src="logo.jpeg"
+        src="../excellobg.jpg"
         class="admin-image"
       />
       <nav class="admin-nav"></nav>

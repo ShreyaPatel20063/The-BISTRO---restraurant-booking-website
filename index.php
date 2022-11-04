@@ -50,9 +50,9 @@ session_start();
           <img src="images/Whitelogo-nobackground.png" class="u-logo-image u-logo-image-1">
         </a>
         <a href="logout.php" class="u-btn u-button-style u-custom-font u-heading-font u-none u-text-hover-grey-15 u-btn-1">Logout</a><!-- add logout option -->
-        <a href="" class="u-btn u-button-style u-custom-font u-heading-font u-none u-text-hover-grey-15 u-btn-2">GiftCard</a><!-- remove this option -->
+        <a href="./about-html/index.html" class="u-btn u-button-style u-custom-font u-heading-font u-none u-text-hover-grey-15 u-btn-2">About Us</a><!-- remove this option -->
         <a href="signup.php" class="u-btn u-button-style u-custom-font u-heading-font u-none u-text-hover-grey-15 u-btn-3">Login/SignUp</a>
-        <a href="https://excello.com/jobs" class="u-btn u-button-style u-custom-font u-heading-font u-none u-text-hover-grey-15 u-btn-4">Hiring</a>
+        <a href="https://forms.gle/yKeB6Ng5L3ZCuE8t6" class="u-btn u-button-style u-custom-font u-heading-font u-none u-text-hover-grey-15 u-btn-4">Hiring</a>
         <a href="booking.php" class="u-btn u-button-style u-custom-font u-heading-font u-none u-text-hover-grey-15 u-btn-5">Reservation</a>
         <a href="menu.html" class="u-btn u-button-style u-custom-font u-heading-font u-none u-text-hover-grey-15 u-btn-6">Menu</a>
       </div></header>
@@ -415,16 +415,5 @@ c0-7.4,3.4-18.8,18.8-18.8h13.8v15.4H75.5z"></path></svg></span>
         </div>
         <div class="u-align-left u-border-1 u-border-white u-expanded-width u-line u-line-horizontal u-opacity u-opacity-25 u-line-1"></div>
       </div></footer>
-    <section class="u-backlink u-clearfix u-grey-80">
-      <a class="u-link" href="https://nicepage.com/website-templates" target="_blank">
-        <span>Website Templates</span>
-      </a>
-      <p class="u-text">
-        <span>created with</span>
-      </p>
-      <a class="u-link" href="" target="_blank">
-        <span>Website Builder Software</span>
-      </a>. 
-    </section>
-  
+    
 </body></html>

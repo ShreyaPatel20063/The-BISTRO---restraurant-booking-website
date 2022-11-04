@@ -1,3 +1,29 @@
+<?php
+
+if(isset($_POST['add'])){
+  $chk = $_POST['chkbx'];
+  $chkval = implode(",", $chk);
+  $lastelement = array_key_last($_POST['chkbx']);
+  //echo "$chkval";
+
+
+  /*foreach($chk as $k=>$chk1){
+    if($k == $lastelement){
+      $chkval.="'".$chk1."'";
+      //echo $chkval;
+    }
+    else{
+      $chkval .= "'".$chk1."'," ;
+      //echo $chkval;
+    }
+  }*/
+  //echo $chk;
+  include("C:/xampp/htdocs/firstphp/The-BISTRO---restraurant-booking-website/dbconnection.php");
+  $doneqry = "UPDATE tblbooking SET status='done' where bid in ($chkval)";
+  $connection = mysqli_query($conn, $doneqry);
+}
+?>
+
 <!DOCTYPE html>
 <html>
 <style>
@@ -20,12 +46,13 @@ body{
 
 <table style="width:80%">
 <?php
-    include("C:/xampp/htdocs/firstphp/The-BISTRO---restraurant-booking-website/dbconnection.php");
+    include("../dbconnection.php");
     $qry = "SELECT * FROM tblbooking";
     $datafetch = mysqli_query($conn, $qry);
 
     if($datafetch->num_rows > 0){
       ?> 
+          <form method="post" name="addme">
   <tr>
     <th>bid</th>
     <th>cid</th>
@@ -33,18 +60,18 @@ body{
     <th>date</th>
     <th>time</th>
     <th>status</th>
-  
+
   </tr> <?php
     while($data = mysqli_fetch_assoc($datafetch)){
       $bid = $data['bid'];
   echo "<tr>
   
-    <td><input type = checkbox name= $bid value= $bid><span> ".$data['bid']."</td>
+    <td><input type ='checkbox'  name='chkbx[]' value='$bid'><span>".$data['bid']."</td>
     <td>".$data['cid']."</td>
     <td>".$data['people']."</td>
     <td>".$data['date']."</td>
     <td>".$data['time']."</td>
-    <td><form method=post>".$data['status']."</td>
+    <td>".$data['status']."</td>
 
   </tr>";
 
@@ -59,7 +86,9 @@ body{
 
 
 
-}
+};
+echo "<button name='add' id='add' type='submit'>SUBMIT  </button>
+</form>";
 }else{
   ?> <script>0 results..</script> <?php
 }

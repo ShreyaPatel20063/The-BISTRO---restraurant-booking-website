@@ -47,4 +47,15 @@
     }*/
 
 
+    function bookloc($date, $time, $people, $loc){
+        include("dbconnection.php");
+        $cid = $_SESSION['cid'];
+                $booking = "INSERT INTO tblbooking (cid, people, date, time, status) VALUES ('$cid', '$people', '$date', '$time', 'pending')";
+                $insertintoDB = mysqli_query($conn, $booking);
+                if($insertintoDB){
+                    //echo "Success data enterd into DB";
+                }else{
+                    echo "DATA not entered / data already exist";
+                }
+    }
 ?>

@@ -1,4 +1,3 @@
-<!--HTML FOR RESERVATION (SGP 3RD SEM)-->
 <?php
     session_start();
     if(isset($_SESSION['name'])){
@@ -13,9 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="excellofinal.css">
 </head>
-
 <body>
-
     <div class="container">
         <div class="container-time">
             <div class="heading-time">
@@ -42,44 +39,56 @@
                 <div class="heading-res"><h2>ONLINE RESERVATION</h2></div>
                
                 <div class="form-field">
-                    <p>Your Registered Name:</p>
+                    <p>Your Name:</p>
                     <?php echo $_SESSION['name']?>
                 </div>
                 <div class="form-field">
-                    <p>Your Registered Email:</p>
+                    <p>Your Email:</p>
                     <?php echo $_SESSION['email']?>
                 </div>
                 <div class="form-field">
+                    <p>Contact Number:</p>
+                    <?php echo $_SESSION['phone']?>
+                </div>
+                <div class="form-field">
                     <p>Date:</p>
-                    <input type="date" name="date" id="date" placeholder="dd-mm-yy" required>
+                    <input type="date" name="date" placeholder="dd-mm-yy" required>
                 </div>
                 <div class="form-field">
                     <p>Time:</p>
-                    <input type="time" name="time" id="time" required>
+                    <input type="time" name="time" required>
                 </div>
                 <div class="form-field">
-                    <p>Number of people(Min:1, Max:15):</p>
-                    <input type="number" id="people" name="people" placeholder="People" min="1" max="15" required>
+                    <p>Number of people:</p>
+                    <input type="number" name="people" placeholder="No of people" min="1 " max="300" required>
                  </div>
-                <button class="btn" type="submit" name="submit">SUBMIT</button>
-                <a href="bookinglocation.php"><br>To book Banquet Hall or Terrace click here.</a>
+                 <div class="form-field">
+                    <p>Select Location:</p>
+                    <select name="location">
+                        <option value="Banquet Hall" id="bh">Banquet Hall</option>
+                        <option value="Terrace" id="ter">Terrace</option>
+                    </select>
 
+                 </div>
+                
+                <button class="btn" type="submit" name="submit">
+                    SUBMIT
+                </button>
             </form>
 
         </div>
     </div>
     
-    
 </body>
 </html>
-
 <?php
-    if(isset($_POST['submit'])){
+     if(isset($_POST['submit'])){
         $email = $_SESSION['email'];
         $name = $_SESSION['name'];
         $people = $_POST['people'];
         $date = $_POST['date'];
         $time = $_POST['time'];
+        $loc = $_POST['location'];
 
         //echo "php self entered";
 

@@ -4,7 +4,8 @@
     session_unset();
     
     session_destroy();
-    
-    header("Location: login.php");
+
+    echo "<script>alert(Logged Out!)</script>";
+    header("Location: index.php");
 
 ?>
