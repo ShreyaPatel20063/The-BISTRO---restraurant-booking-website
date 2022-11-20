@@ -60,7 +60,7 @@
                 </div>
                 <div class="form-field">
                     <p>Number of people:</p>
-                    <input type="number" name="people" placeholder="No of people" min="1 " max="300" required>
+                    <input type="number" name="people" placeholder="No of people" min="1 " max="250" required>
                  </div>
                  <div class="form-field">
                     <p>Select Location:</p>
@@ -100,7 +100,7 @@
             echo "<script>alert()</script>";
         }*/
 
-        checkMail($people, $date, $time);
+        bookloc($date, $time, $people, $loc);
         echo "<script>alert(Booking Confirm)</script>";
 
     }

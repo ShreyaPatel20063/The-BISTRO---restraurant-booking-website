@@ -50,7 +50,7 @@
     function bookloc($date, $time, $people, $loc){
         include("dbconnection.php");
         $cid = $_SESSION['cid'];
-                $booking = "INSERT INTO tblbooking (cid, people, date, time, status) VALUES ('$cid', '$people', '$date', '$time', 'pending')";
+                $booking = "INSERT INTO tblbanquet (cid, people, date, time, loc) VALUES ('$cid', '$people', '$date', '$time', '$loc')";
                 $insertintoDB = mysqli_query($conn, $booking);
                 if($insertintoDB){
                     //echo "Success data enterd into DB";

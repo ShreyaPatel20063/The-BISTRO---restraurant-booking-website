@@ -31,26 +31,30 @@ session_start();
         
 
         include('functions.php');
-        login_info($email, $pswrd);
+        if(login_info($email, $pswrd)){
+            include("dbconnection.php");
+            $sessiondata = "SELECT * FROM  tblcustomer WHERE email = '$email'";
+            //echo $sessiondata;
+            $sessionconnectiontoDB = mysqli_query($conn, $sessiondata);
 
-
-        include("dbconnection.php");
-        $sessiondata = "SELECT * FROM  tblcustomer WHERE email = '$email'";
-        //echo $sessiondata;
-        $sessionconnectiontoDB = mysqli_query($conn, $sessiondata);
-
-        if($sessionconnectiontoDB){
-            $dataforsession = mysqli_fetch_assoc($sessionconnectiontoDB);
-            $_SESSION['email'] = $dataforsession['email'];
-            $_SESSION['pswrd'] = $dataforsession['pswrd'];
-            $_SESSION['name'] = $dataforsession['name'];
-            $_SESSION['phone'] = $dataforsession['phone'];
-            $_SESSION['cid'] = $dataforsession['cid'];
-            header("Location: index.php");
-            //exit();
+            if($sessionconnectiontoDB){
+                $dataforsession = mysqli_fetch_assoc($sessionconnectiontoDB);
+                $_SESSION['email'] = $dataforsession['email'];
+                $_SESSION['pswrd'] = $dataforsession['pswrd'];
+                $_SESSION['name'] = $dataforsession['name'];
+                $_SESSION['phone'] = $dataforsession['phone'];
+                $_SESSION['cid'] = $dataforsession['cid'];
+                header("Location: index.php");
+                //exit();
+            }
+            else {
+                echo "session data not entered";
+            }
+        }else{
+            ?><script>alert("Login Fail!!!")</script><?php
         }
-        else {
-            echo "session data not entered";
-        }
+
+
+        
     }
 ?>

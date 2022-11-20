@@ -69,26 +69,27 @@
 
                 $data = mysqli_fetch_assoc($select);
 
-                if($data['pswrd'] !== $pswrd){
+                if($data['pswrd'] == $pswrd){
 
-                    ?><script>alert("Password Incorrect!!!")</script><?php
+                   return true;
                     
 
                 }else{
 
-                    ?><script>alert("Password Verified!!")</script><?php
+                    return false;
 
                 }
 
             }else{
 
                 ?><script>alert("Data Not Found")</script><?php
-
+                return false;
             }
 
         }else{
 
             ?><script>alert("Query could not be executed!!")</script><?php
+            return false;
         
         }
 
